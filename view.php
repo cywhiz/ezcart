@@ -40,7 +40,7 @@
         }
 		else {
             while ($row != 0) {
-                $output[] = '<tr>'. '<td align=center><img width="100px" height="100px" src=images/'.$row['image'].'></td>'. '<td>'.$row['title'].'</td>'. '<td>$'.$row['price'].'</td>'. '<td>'.'<a href="cart.php?action=add&id='.$row['id'].'"><img src="/ezcart/images/add.gif" border="0" /></a></td>'.'</tr>';
+                $output[] = '<tr>'. '<td align=center><img width="100px" height="100px" src=images/'.$row['image'].'></td>'. '<td>'.$row['title'].'</td>'. '<td>$'.$row['price'].'</td>'. '<td>'.'<a href="cart.php?action=add&id='.$row['id'].'"><img src="images/add.gif" border="0" /></a></td>'.'</tr>';
                 $row = $result->fetch();
             }
         }
@@ -54,7 +54,7 @@
         $result = $db->query($sql);
         $output[] = '<table width="80%" border="1" align="center">';
         while ($row = $result->fetch()) {
-            $output[] = '<tr>'. '<td align=center><img width="100px" height="100px" src=images/'.$row['image'].'></td>'. '<td>'.$row['title'].'</td>'. '<td>$'.$row['price'].'</td>'. '<td>'.'<a href="cart.php?action=add&id='.$row['id'].'"><img src="/ezcart/images/add.gif" border="0" /></a></td>'.'</tr>';
+            $output[] = '<tr>'. '<td align=center><img width="100px" height="100px" src=images/'.$row['image'].'></td>'. '<td>'.$row['title'].'</td>'. '<td>$'.$row['price'].'</td>'. '<td>'.'<a href="cart.php?action=add&id='.$row['id'].'"><img src="images/add.gif" border="0" /></a></td>'.'</tr>';
         }
         $output[] = '</table>';
         echo join('', $output);
